@@ -10,7 +10,7 @@ string[] getArr (string message)
 
 void findElement (string[] arr)
 {
-    string[] result =  Array.Empty<string>(); //new string[0];
+    string[] result = Array.Empty<string>();
     int j = 0;
     for (int i = 0; i < arr.Length; i++)
     {
