@@ -1,2 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+string[] getArr (string message)
+{
+    Console.WriteLine(message);
+    string text = Console.ReadLine();
+    string[] textArr  = text.Split(',');   
+    Console.WriteLine("[{0}]", string.Join(", ", textArr));
+    return textArr;
+}
+
+void findElement (string[] arr)
+{
+    string[] result =  new string[0];
+    int j = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            Array.Resize(ref result, j+1);
+            result[j] = arr[i];
+            j++;
+        }
+    }
+    //Console.WriteLine(result);
+    Console.WriteLine("[{0}]", string.Join(", ", result));
+}
+
+string[] array = getArr("Введите элеметны массива через запятую");
+findElement(array);
